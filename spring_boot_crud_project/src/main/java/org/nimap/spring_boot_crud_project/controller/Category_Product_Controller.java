@@ -32,10 +32,8 @@ public class Category_Product_Controller
 	
 	//Get all Categories
 	@GetMapping("api/categories/page")
-	public List<Category> getAllCategory(
-			@RequestParam(value = "pagenumber",defaultValue="0", required=false)Integer pagenumber,
-			@RequestParam(value = "pagesize", defaultValue = "2",required = false)Integer pagesize
-			)
+	public List<Category> getAllCategory(@RequestParam(value = "pagenumber",defaultValue="0", required=false)Integer pagenumber,
+					     @RequestParam(value = "pagesize", defaultValue = "2",required = false)Integer pagesize)
 	{
 		return dao.getAllCategory(pagenumber,pagesize);
 	}
@@ -70,10 +68,8 @@ public class Category_Product_Controller
 	
 	//GET ALL PRODUCT
 	@GetMapping("api/products/page")
-	public List<Product> getAllProduct(
-			@RequestParam(value = "pagenumber",defaultValue="0", required=false)Integer pagenumber,
-			@RequestParam(value = "pagesize", defaultValue = "2",required = false)Integer pagesize
-			)
+	public List<Product> getAllProduct(@RequestParam(value = "pagenumber",defaultValue="0", required=false)Integer pagenumber,
+					   @RequestParam(value = "pagesize", defaultValue = "2",required = false)Integer pagesize)
 	{
 		return dao.getAllProduct(pagenumber,pagesize);
 	}
